@@ -1,0 +1,471 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% Definición de colores institucionales y académicos
+\definecolor{primary}{RGB}{20, 50, 90}
+\definecolor{secondary}{RGB}{140, 30, 30}
+\definecolor{accent}{RGB}{30, 110, 70}
+\definecolor{boxbg}{RGB}{245, 248, 252}
+\definecolor{bordercolor}{RGB}{180, 200, 220}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    filecolor=secondary,      
+    urlcolor=primary,
+    citecolor=accent,
+    pdftitle={Compendio Integral para Examen Parcial - ODT},
+    pdfauthor={UNMSM - EP Geografía}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textbf{UNMSM | EP Geografía} -- Organización y Demarcación Territorial}
+\fancyhead[R]{\small\thepage}
+\fancyfoot[C]{\footnotesize Compendio Académico Especializado para Examen Parcial -- Ciclo 2026-II}
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Estilo de títulos
+\titleformat{\section}{\Large\bfseries\color{primary}}{\thesection.}{0.8em}{}[\titlerule]
+\titleformat{\subsection}{\large\bfseries\color{secondary}}{\thesubsection.}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{accent}}{\thesubsubsection.}{0.5em}{}
+
+% Cajas de texto destacadas
+\newtcolorbox{conceptbox}[1]{
+    colback=boxbg,
+    colframe=primary,
+    fonttitle=\bfseries\color{white},
+    title=#1,
+    arc=3mm,
+    boxrule=1pt,
+    breakable
+}
+
+\newtcolorbox{lawbox}[1]{
+    colback=white,
+    colframe=secondary,
+    fonttitle=\bfseries\color{white},
+    title=#1,
+    arc=2mm,
+    boxrule=1pt,
+    breakable
+}
+
+\newtcolorbox{formulabox}[1]{
+    colback=white,
+    colframe=accent,
+    fonttitle=\bfseries\color{white},
+    title=#1,
+    arc=2mm,
+    boxrule=1pt,
+    breakable
+}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    {\scshape\LARGE Universidad Nacional Mayor de San Marcos\par}
+    \vspace{0.3cm}
+    {\scshape\large (Universidad del Perú, Decana de América)\par}
+    \vspace{0.2cm}
+    {\large Facultad de Ciencias Sociales / Escuela Profesional de Geografía\par}
+    \vspace{2cm}
+    
+    \rule{\linewidth}{1.5pt}\\[0.4cm]
+    {\huge\bfseries\color{primary} COMPENDIO INTEGRAL Y RESÚMENES ANALÍTICOS DE SESIONES PARA EL EXAMEN PARCIAL\par}
+    \vspace{0.3cm}
+    {\Large\bfseries\color{secondary} CURSO: ORGANIZACIÓN Y DEMARCACIÓN TERRITORIAL (ODT)\par}
+    \rule{\linewidth}{1.5pt}\\[1.5cm]
+    
+    \textbf{\large Catedrático:}\\
+    {\Large Mg. Geóg. César Eduardo Carrera Saavedra}\\[1cm]
+    
+    \textbf{\large Marco Académico y Normativo Integrado:}\\
+    {\large Ciclo Académico 2026-II}\\[0.3cm]
+    \small Texto Único Ordenado del Reglamento de la Ley N.° 27795 (D.S. N.° 134-2025-PCM)\\
+    Ley N.° 32279 (Ley de Ordenamiento Territorial y Creación del SINADOT)\\
+    Ley N.° 29664 (SINAGERD) -- Ley del Sistema de Seguridad y Defensa Nacional\\
+    Estudio de Caso y Trabajo de Campo: Distrito de Checras, Provincia de Huaura\\[2cm]
+    
+    \vfill
+    {\large Lima, Perú -- Octubre de 2026\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introducción y Síntesis Epistemológica de la Asignatura}
+
+El curso de \textbf{Organización y Demarcación Territorial (ODT)} en la Escuela Profesional de Geografía de la UNMSM se sitúa en la cúspide de la formación profesional de los geógrafos (Ciclo X). Su propósito fundamental es capacitar al discente en el modelamiento espacial, el rigor cuantitativo, el dominio normativo y la visión geopolítica estratégica requerida para organizar el espacio soberano de la República del Perú.
+
+Históricamente, el territorio peruano ha sido configurado bajo presiones de demandas locales atomizadas, acuerdos políticos clientelares y vacíos de información cartográfica georreferenciada. La consecuencia de este proceso ha sido una severa fragmentación jurisdiccional, proliferación de distritos inviables demográficamente, macrocefalia urbana en el litoral y permanentes litigios limítrofes interdepartamentales e interdistritales.
+
+Frente a este escenario, la geografía moderna aporta un instrumental científico cuantitativo (Teoría de Grafos, Polígonos de Thiessen/Voronoi, Geometría Riemanniana de la fricción del espacio) y una articulación directa con los mandatos vinculantes del \textbf{Texto Único Ordenado (TUO) de la Ley N.° 27795} (aprobado por \textbf{Decreto Supremo N.° 134-2025-PCM}) y la flamante \textbf{Ley N.° 32279} (Ley de Creación del Sistema Nacional de Ordenamiento Territorial - SINADOT).
+
+\begin{conceptbox}{Diferenciación Conceptual Clave}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Organización Territorial (OT):} Proceso continuo y estructurado de división político-administrativa del territorio de un Estado, cuyo fin es optimizar el gobierno, la prestación eficiente de servicios básicos y la planificación del desarrollo armónico en unidades jerárquicas (regiones/departamentos, provincias, distritos) con competencias claramente atribuidas (Ferrás, 2007; Boisier, 2004).
+    \item \textbf{Demarcación Territorial (DT):} Acto técnico-jurídico formal mediante el cual el Estado determina, delimita, redelimita y formaliza en el terreno y en la cartografía oficial los límites territoriales de las circunscripciones políticas, sobre la base de criterios geográficos físicos, históricos, demográficos y socioeconómicos (Remy, 2014; TUO Ley 27795). Su fin inmediato es extinguir la indeterminación limítrofe, blindar la gobernanza y dotar de seguridad jurídica al suelo.
+\end{itemize}
+\end{conceptbox}
+
+\newpage
+\section{MÓDULO I: Situación Problemática de la ODT en el Perú (Sesión 1)}
+
+\subsection{Evolución y Realidad Político-Administrativa del Perú}
+La división político-administrativa peruana se encuentra estructurada en:
+\begin{itemize}
+    \item \textbf{24 Departamentos y 1 Provincia Constitucional (Callao)}, organizados transitoriamente bajo 25 Gobiernos Regionales.
+    \item \textbf{196 Provincias}, de las cuales la más recientemente creada fue la Provincia de \textbf{Putumayo} (Loreto, creada en 2014 mediante Ley N.° 30186).
+    \item \textbf{1,874 Distritos} (aproximadamente, en continuo debate legislativo), entre ellos creaciones recientes como Santa Rosa de Loreto (03 de julio de 2025, Ley N.° 32403), Huipoca (Ucayali, Ley N.° 31133), Boquerón (Ucayali, Ley N.° 31134) y Ahuayro (Apurímac, Ley N.° 31135).
+    \item \textbf{Lima Metropolitana:} Caso atípico y macrocefálico. Una única provincia conformada por 43 distritos donde coexisten más de 10 millones de habitantes (casi un tercio de la población nacional) y que concentra la mayor parte del presupuesto de la República, operando la Municipalidad Metropolitana de Lima con competencias de Gobierno Regional.
+\end{itemize}
+
+\subsection{Diagnóstico Crítico de la Demarcación Territorial}
+El diagnóstico territorial del Perú presenta anomalías estructurales:
+\begin{enumerate}
+    \item \textbf{Indeterminación Limítrofe Masiva:} Más del 70\% de los distritos y más del 80\% de las provincias del país carecen de límites con saneamiento definitivo o han sido definidos mediante leyes decimonónicas con referencias toponímicas ambiguas (ejemplo: ``hasta la cumbre del cerro frente a la casa del señor X'', ``siguiendo la quebrada seca'').
+    \item \textbf{División Irracional y Atomización:} Creación de distritos impulsada por caudillismos políticos o intereses electorales que no cumplen con los umbrales mínimos de población, viabilidad económica ni capacidad para sostener un aparato burocrático municipal autónomo.
+    \item \textbf{Superposición de Jurisdicciones:} Municipios colindantes que cobran tributos al mismo vecino, expiden licencias sobre los mismos predios o, por el contrario, declaran abandono total en franjas fronterizas (``tierra de nadie'').
+\end{enumerate}
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Principales Conflictos Limítrofes Interdepartamentales e Interdistritales en el Perú}
+\begin{tabularx}{\textwidth}{p{3.5cm}p{4cm}X}
+\toprule
+\textbf{Circunscripciones en Disputa} & \textbf{Sector Crítico / Zona en Conflicto} & \textbf{Detonante Geográfico y Económico} \\
+\midrule
+\textbf{Cusco vs. Apurímac} & Distrito de Kimbiri vs. Pichari / Eje VRAEM & Canon gasífero de Camisea, rentas de hidrocarburos y delimitación de microcuencas. \\
+\addlinespace
+\textbf{Puno vs. Moquegua} & Pastogrande / Tolapalca / Aruntaya & Recursos hídricos de la represa Pastogrande, cabeceras de cuenca y canon de minería cuprífera. \\
+\addlinespace
+\textbf{Arequipa vs. Moquegua} & Valle de Tambo / Quebrada Honda & Disputas por fuentes hídricas para irrigación agrícola y exploración minera. \\
+\addlinespace
+\textbf{Amazonas vs. Cajamarca} & Frontera Utcubamba - Jaén & Competencias tributarias sobre asentamientos rurales de café y arroz. \\
+\addlinespace
+\textbf{Ayacucho vs. Huancavelica} & Laramate, San Salvador de Quije & Falta de cartografía georreferenciada y litigios comunales históricos de pastos. \\
+\addlinespace
+\textbf{Lima Interdistrital:} Pachacámac & ``Distrito sin límites precisos'' (Lurín, Cieneguilla, VMT) & Expansión urbana descontrolada, tráfico de terrenos, pérdida de áreas agrícolas. \\
+\addlinespace
+\textbf{Lima Norte:} SMP vs. Independencia & Franja Comercial Panamericana Norte / MegaPlaza & Superposición de cobranza tributaria y recaudación de arbitrios comerciales. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Tipología de Acciones de Demarcación Territorial según la Normativa}
+El TUO de la Ley N.° 27795 (D.S. 134-2025-PCM) clasifica las acciones de demarcación territorial en dos grandes categorías:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Acciones de Normalización:}
+    \begin{itemize}
+        \item \emph{Delimitación:} Fijación formal de límites donde nunca existieron o estaban indefinidos.
+        \item \emph{Redelimitación:} Modificación o rectificación técnica de límites formalmente aprobados que presentan errores materiales o desarticulaciones físicas.
+        \item \emph{Categorización y Recategorización:} Asignación o modificación del rango jerárquico de un centro poblado (Caserío, Pueblo, Villa, Ciudad, Metrópoli).
+        \item \emph{Traslado de Capital:} Modificación de la sede político-administrativa de un distrito hacia un núcleo con mayor centralidad o resiliencia física.
+    \end{itemize}
+    \item \textbf{Acciones de Formalización:}
+    \begin{itemize}
+        \item \emph{Creación:} Establecimiento de una nueva provincia o distrito mediante Ley expresa del Congreso, requiriendo obligatoriamente un Estudio Técnico de la Secretaría de Demarcación y Organización Territorial (SDOT-PCM).
+        \item \emph{Anexión Territorial:} Incorporación de un sector o poblado a otra circunscripción contigua.
+        \item \emph{Fusión de circunscripciones:} Unificación de distritos para corregir atomizaciones inviables.
+    \end{itemize}
+\end{itemize}
+
+\subsection{El Rol Estratégico del Geógrafo en el SOT}
+El geógrafo interviene como estratega central a través de un procedimiento metodológico en cuatro fases obligatorias:
+\begin{enumerate}
+    \item \textbf{Paso 1: Diagnóstico Físico y Ambiental:} Geomorfología, cuencas hidrográficas, fallas geológicas y zonificación de riesgos (SINAGERD).
+    \item \textbf{Paso 2: Diagnóstico Socioeconómico y Cultural:} Dinámica demográfica, tasas intercensales, tenencia de la tierra en comunidades campesinas y etnicidad.
+    \item \textbf{Paso 3: Análisis de Jerarquía Urbana:} Teoría de Lugares Centrales (Christaller) y Sistema de Ciudades y Centros Poblados (SICCEP).
+    \item \textbf{Paso 4: Evaluación de Conectividad mediante Teoría de Grafos:} Modelamiento topológico de la red vial, cálculo de accesibilidad e identificación de nodos críticos.
+\end{enumerate}
+
+\newpage
+\section{MÓDULO II: Modelos Cuantitativos y Métricas Espaciales en el SOT / EDZ (Sesión 3)}
+
+\subsection{El Estudio de Diagnóstico y Zonificación (EDZ)}
+El EDZ es el instrumento técnico obligatorio elaborado por los Gobiernos Regionales y visado por la SDOT-PCM para evaluar integralmente el territorio de una provincia. Su finalidad es definir el \textbf{Sistema de Organización Territorial (SOT)}, clasificando a la provincia en unidades territoriales funcionales y detectando las incongruencias limítrofes que deben ser saneadas mediante un Proyecto de Ley de Saneamiento y Organización Territorial.
+
+\subsection{El Caso Provincial de Huaura: Polarización Costa-Sierra}
+La provincia de Huaura (con capital en la ciudad litoral de Huacho) sirve de arquetipo para el análisis territorial peruano:
+\begin{itemize}
+    \item \textbf{Gradiente Altitudinal Severo:} Comprende 12 distritos que abarcan desde los 0 m.s.n.m. (Huacho, Carquín, Caleta de Végueta) hasta más de 4,500 m.s.n.m. en las nacientes de la cuenca (distritos andinos de Santa Leonor, Checras y Paccho).
+    \item \textbf{Hiperconcentración Urbana en la Costa:} El continuo conurbano Huacho - Hualmay - Santa María - Huaura aglutina a más del 70\% de la población provincial, absorbiendo los principales presupuestos, servicios hospitalarios y comerciales.
+    \item \textbf{Despoblamiento y Fragmentación en la Sierra:} Los distritos de la cuenca alta presentan tasas intercensales negativas o de crecimiento vegetativo mínimo, con poblaciones dispersas en anexos rurales y una red vial precaria vulnerable a desastres.
+\end{itemize}
+
+\subsection{Teoría de Grafos y Abstracción de la Red Vial}
+Una red de transporte territorial se modela matemáticamente como un grafo conexo o plano $G = (V, E)$, donde:
+\begin{itemize}
+    \item $V$ es el conjunto de vértices o nodos (representan las capitales distritales y centros poblados principales).
+    \item $E$ es el conjunto de aristas o líneas (representan los tramos carreteros o vías de comunicación entre nodos).
+    \item $p$ es el número de subgrafos aislados o componentes conexas (para una red completamente conectada, $p=1$).
+\end{itemize}
+
+\begin{formulabox}{Fórmulas Matemáticas de Índices de Conectividad (Kansky - 1963)}
+\begin{align}
+\text{Índice Beta: } & \beta = \frac{e}{v} \quad \left(e = \text{aristas}, v = \text{vértices}\right) \\
+\text{Índice Gamma: } & \gamma = \frac{e}{e_{\max}} = \frac{e}{3(v - 2)} \quad \text{(para grafos planares)} \\
+\text{Número Ciclomático: } & \mu = e - v + p \\
+\text{Índice Alfa: } & \alpha = \frac{\mu}{\mu_{\max}} = \frac{e - v + p}{2v - 5} \quad \text{(redundancia planar)}
+\end{align}
+\end{formulabox}
+
+\subsubsection{Interpretación Cuantitativa y Umbrales en la ODT}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Índice Beta ($\beta$):} 
+    \begin{itemize}
+        \item $\beta < 1.0$: Red dendrítica o puramente arbórea. Típico de valles andinos cerrados con caminos sin salida. Alta vulnerabilidad.
+        \item $\beta = 1.0$: Red en umbral crítico con exactamente un circuito básico.
+        \item $\beta > 1.0$: Red en malla o circuito complejo. Conectividad madura.
+    \end{itemize}
+    \item \textbf{Índice Gamma ($\gamma$):}
+    Expresa la proporción porcentual entre las carreteras existentes ($e$) y el total máximo teórico posible de carreteras en el plano sin cruzarse en falso desnivel ($3(v-2)$). En cuencas andinas, valores típicos se ubican entre el $30\%$ y el $45\%$, revelando un déficit estructural de conexión superior al $55\%$.
+    \item \textbf{Número Ciclomático ($\mu$):}
+    Representa el número de rutas alternativas independientes o ciclos cerrados que posee la red vial. Si $\mu = 0$, la red carece por completo de rutas de evacuación alternas; si un huayco corta la vía troncal, todos los poblados aguas arriba quedan absolutamente incomunicados.
+    \item \textbf{Índice Alfa ($\alpha$):}
+    Mide la redundancia relativa. Muestra qué porcentaje del máximo número de circuitos independientes ha sido efectivamente construido por el Estado.
+\end{itemize}
+
+\subsection{Centralidad Nodal y Accesibilidad Topológica}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Grado Nodal ($G^\circ_n$ o $K_i$):} Número de aristas incidentes en el nodo $i$.
+    \begin{itemize}
+        \item \emph{Huacho:} Elevado grado nodal litoral. Convergen la Panamericana Norte (hacia Lima y hacia el Norte), la vía litoral a Carquín y la penetración hacia Sayán. Opera como un \textbf{Hub Macro-Regional}.
+        \item \emph{Sayán:} Posee el mayor grado nodal intermedio de la cuenca. Conecta la costa (Huacho y Río Seco/Chancay) con la sierra media (Churín/Oyón) y los desvíos hacia las cuencas altas de Checras y Paccho. Es el \textbf{Pivote Funcional de Retaguardia}.
+    \end{itemize}
+    \item \textbf{Matriz de Distancias y Accesibilidad de Shimbel ($S_i$):}
+    \begin{equation}
+        S_i = \sum_{j=1}^{v} d_{ij}
+    \end{equation}
+    Donde $d_{ij}$ representa la distancia más corta (métrica o topológica) entre el nodo $i$ y todos los demás nodos de la red. El nodo con el menor valor de $S_i$ es el \textbf{centro de máxima accesibilidad}.
+    \item \textbf{Número de König (Excentricidad Nodal, $K_i$):}
+    \begin{equation}
+        K_i = \max_{j} d_{ij}
+    \end{equation}
+    Mide la distancia al punto más remoto de la red desde el nodo $i$. El nodo con el menor número de König minimiza el peor escenario de desplazamiento (centro geodésico).
+    \item \textbf{Índice de Rodeo (Detour Index, $IR$):}
+    \begin{equation}
+        IR = \frac{\text{Distancia Real por Carretera}}{\text{Distancia Euclidiana en Línea Recta}} = \frac{d_{\text{real}}}{d_{\text{euc}}}
+    \end{equation}
+    En terrenos llanos de la costa, $IR \approx 1.1 - 1.3$. En carreteras de penetración andina con curvas de herradura (switchbacks), $IR$ supera frecuentemente valores de $3.5$ a $4.5$, multiplicando el gasto energético y el tiempo de viaje.
+\end{itemize}
+
+\subsection{Polígonos de Thiessen (Voronoi) y Deformación Espacial}
+El modelamiento mediante polígonos de Thiessen asigna a cada núcleo poblado su área de atracción geométrica más cercana:
+\begin{equation}
+    V(P_i) = \{ x \in \mathbb{R}^2 \mid \|x - P_i\| \le \|x - P_j\|, \forall j \ne i \}
+\end{equation}
+Cuando se comparan los límites jurisdiccionales formales con los polígonos de Voronoi puros o multiplicativamente ponderados por población ($w_i$), emergen agudas distorsiones:
+\begin{itemize}
+    \item Poblaciones que administrativamente pertenecen al distrito ``A'' pero que gravitan funcional, económica y comercialmente hacia la capital del distrito ``B''.
+    \item Barreras orográficas infranqueables (cañones fluviales, farallones rocosos) que hacen imposible el tránsito en línea recta euclidiana, exigiendo la incorporación de la métrica de Riemann.
+\end{itemize}
+
+\begin{conceptbox}{Geometría de Riemann y Tensor Métrico de Fricción ($g_{ij}$)}
+En el relieve andino, el espacio no es plano ni euclidiano. La distancia real no se mide por la fórmula pitagórica $ds^2 = dx^2 + dy^2$, sino mediante el tensor métrico generalizado:
+\begin{equation}
+    ds^2 = \sum_{i,j} g_{ij} \, dx^i dx^j
+\end{equation}
+Donde el tensor $g_{ij}$ absorbe la pendiente topográfica, la calidad del afirmado vial, el riesgo de bloqueo por deslizamiento y el costo de fricción temporal. Dos poblados separados por escasos 2 km en línea recta pueden presentar una curvatura de fricción tal que el tiempo de tránsito supere las 3 horas.
+\end{conceptbox}
+
+\newpage
+\section{MÓDULO III: Sistemas de Centros Poblados y Redes de Transporte: Caso Checras (Sesión 5)}
+
+\subsection{Marco Normativo y Categorización bajo el TUO Ley 27795}
+El D.S. N.° 134-2025-PCM unifica las condiciones obligatorias para la categorización y organización territorial de centros poblados:
+\begin{enumerate}
+    \item Población concentrada organizada mínima.
+    \item Equipamiento social básico de salud, educación y saneamiento.
+    \item Infraestructura de comunicación vial continua conectada al Sistema Nacional de Carreteras (SINAC).
+\end{enumerate}
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Jerarquía del Sistema Nacional de Centros Poblados (SICCEP)}
+\begin{tabularx}{\textwidth}{p{3.5cm}p{3cm}X}
+\toprule
+\textbf{Categoría Legal} & \textbf{Rango Poblacional} & \textbf{Requisitos de Equipamiento y Funcionalidad} \\
+\midrule
+\textbf{Caserío} & 151 a 500 hab. & Viviendas no dispersas, escuela primaria multigrado, local comunal. \\
+\addlinespace
+\textbf{Pueblo} & 501 a 2,000 hab. & Centro de salud nivel I-2, educación primaria y secundaria, servicios de agua y saneamiento continuo, vías vehiculares articuladas. \\
+\addlinespace
+\textbf{Villa} & 2,001 a 5,000 hab. & Centro de salud I-3, juzgado de paz, policía nacional, servicios bancarios y comerciales consolidados. \\
+\addlinespace
+\textbf{Ciudad Menor / Intermedia} & $> 5,000$ hab. & Hospital o posta I-4, educación técnica/superior, traza urbana consolidada, nodo de transporte regional. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Especialización Económica: El Cociente de Localización ($LQ$)}
+Para evaluar si un centro poblado ejerce una función tractora en la cuenca, se emplea el Cociente de Localización:
+\begin{equation}
+    LQ = \frac{e_i / e_{total\_local}}{E_i / E_{total\_provincial}}
+\end{equation}
+En el distrito de Checras, para el centro poblado de \textbf{Pampa Grande / Purapucu} en el sector comercio y servicios frutícolas:
+\begin{equation}
+    LQ = \frac{0.4250}{0.1158} = 3.67
+\end{equation}
+Al ser $LQ = 3.67 > 1.25$, se demuestra cuantitativamente que Pampa Grande ostenta una \textbf{hiperespecialización comercial de intercambio}, operando como el verdadero mercado colector de la producción de melocotón, palta y chirimoya de la cuenca baja de Checras hacia Sayán y el litoral.
+
+\subsection{Topología de la Red Vial y Métricas Numéricas en Checras}
+La red vial del distrito de Checras conecta 8 centros poblados clave:
+\begin{enumerate}
+    \item Maray (Capital Legal, 3,500 msnm)
+    \item Canín (3,600 msnm)
+    \item Pampa Grande / Purapucu (2,500 msnm)
+    \item San Agustín de Puñun (3,550 msnm, 845 hab.)
+    \item Tulpay (3,400 msnm)
+    \item Tongos (3,350 msnm)
+    \item Lacsaura (Punto de confluencia con la vía troncal a Churín)
+    \item Pampa Libre
+\end{enumerate}
+
+Para esta red vial distrital ($v = 8$, $e = 8$, $p = 1$):
+\begin{itemize}
+    \item \textbf{Índice Beta:} $\beta = \frac{8}{8} = 1.00$. Red en el umbral crítico entre árbol y malla elemental.
+    \item \textbf{Índice Gamma:} $\gamma = \frac{8}{3(8 - 2)} = \frac{8}{18} = 0.4444$ ($44.44\%$). El distrito cuenta únicamente con el 44.4\% de las carreteras requeridas para una articulación completa, con un déficit del $55.56\%$.
+    \item \textbf{Número Ciclomático:} $\mu = e - v + p = 8 - 8 + 1 = 1$. Posee un único circuito cerrado (el triángulo Maray - Puñun - Pampa Grande). Para los 5 pueblos restantes, $\mu = 0$ (cero alternativas de desvío).
+    \item \textbf{Índice Alfa:} $\alpha = \frac{\mu}{2v - 5} = \frac{1}{2(8) - 5} = \frac{1}{11} = 0.0909$ ($9.09\%$). Redundancia vial mínima.
+\end{itemize}
+
+\subsection{Accesibilidad Topológica y la Paradoja de la Capital Formal}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Matriz de Accesibilidad y Excentricidad en Checras}
+\begin{tabularx}{\textwidth}{lccccX}
+\toprule
+\textbf{Centro Poblado} & \textbf{Población} & \textbf{Altitud (msnm)} & \textbf{Shimbel ($S_i$, km)} & \textbf{König ($K_i$, km)} & \textbf{Rol Territorial Real} \\
+\midrule
+\textbf{Maray} & 420 hab. & 3,500 m & 112 km & 28 km & Capital formal en la ley; baja actividad económica. \\
+\addlinespace
+\textbf{Puñun} & 845 hab. & 3,550 m & 102 km & 23 km & Centro comunal histórico; mayor peso demográfico y social. \\
+\addlinespace
+\textbf{Pampa Grande} & 650 hab. & 2,500 m & 108 km & 26 km & Nodo comercial y frutícola de intercambio rápido. \\
+\addlinespace
+\textbf{Lacsaura} & 180 hab. & 2,200 m & 124 km & 32 km & Confluencia vial con la troncal Sayán - Churín. \\
+\addlinespace
+\textbf{Tulpay} & 310 hab. & 3,400 m & 102 km & 24 km & Alta accesibilidad interna; producción pecuaria. \\
+\addlinespace
+\textbf{Canín} & 220 hab. & 3,600 m & 150 km & 38 km & El punto más aislado del sistema ($S_i$ máximo). \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{conceptbox}{La Paradoja de la Capital Formal en Checras}
+La Ley de Creación de Checras designó históricamente a \textbf{Maray} como la capital político-administrativa del distrito. No obstante, el modelamiento territorial revela una doble paradoja:
+\begin{enumerate}
+    \item \textbf{Primacía Demográfica y Comunal:} San Agustín de Puñun duplica la población de Maray, concentra la sede de la Comunidad Campesina, el juzgado de paz y las asambleas históricas.
+    \item \textbf{Primacía Económica y Logística:} Pampa Grande y el eje Purapucu concentran el $LQ$ comercial más elevado, gozan de una cota altitudinal más baja (2,500 msnm), menor fricción hacia Sayán y la costa, y mayor dinamismo económico.
+\end{enumerate}
+Esta incongruencia sustenta la necesidad de aplicar las acciones de \textbf{Traslado de Capital} o \textbf{Redelimitación Funcional} amparadas por el TUO de la Ley N.° 27795.
+\end{conceptbox}
+
+\subsection{Vulnerabilidad Geológica y Ruptura de Conectividad (SINAGERD)}
+En la quebrada de Lacsaura y en el ascenso hacia Puñun, las pendientes superan el $45\%$. Las formaciones rocosas fracturadas y la presencia de lluvias estacionales provocan caídas de rocas y deslizamientos en masa. Cuando ocurre un bloqueo vial en el tramo Lacsaura - Pampa Grande:
+\begin{itemize}
+    \item El número ciclomático del distrito cae inmediatamente a $\mu = 0$.
+    \item La red queda partida en subgrafos disjuntos ($p = 2$).
+    \item Los centros poblados de altura (Puñun, Maray, Canín, Tulpay) quedan desabastecidos de combustible, medicamentos e insumos agrícolas, imposibilitando la evacuación médica de urgencia.
+\end{itemize}
+
+\newpage
+\section{MÓDULO IV: Trabajo de Campo Integrado y los 6 Proyectos de Investigación en Checras}
+
+Durante el itinerario técnico de campo tri-curso sincronizado (Ciclo X de Geografía - UNMSM), los discentes investigaron las contradicciones territoriales de Checras a través de seis proyectos especializados:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Proyecto 1: Estudio de Centralidad, Interconectividad y Análisis de Redes en el Eje de Purapucu:}
+    Evaluó los tiempos de viaje a pie y en vehículo desde las alturas (Maray, Puñun, Tulpay) hacia el eje frutícola de Purapucu (2,500 msnm). Modeló isócronas de accesibilidad y matrices de origen-destino bajo estándares de la SDOT-PCM, demostrando la gravitación funcional hacia Purapucu como nuevo nodo de confluencia.
+    
+    \item \textbf{Proyecto 2: Planificación de Hábitat Compacto y Mitigación de Brechas de Infraestructura:}
+    Analizó la contraposición espacial entre el crecimiento desordenado en Purapucu (riesgo de fagocitar parcelas frutícolas de alta productividad por avance urbano informal) y el núcleo tradicional de Puñun Histórico (3,550 msnm), formulando esquemas de ordenamiento urbano-rural compacto.
+    
+    \item \textbf{Proyecto 3: Dinámicas Ambientales, Cambio de Uso del Suelo y Presión Inmobiliaria:}
+    Investigó la presión ejercida por el corredor turístico y termomedicinal de Chiuchín/Churín sobre las tierras bajas de Checras, diagnosticando la pérdida de cobertura vegetal y la contaminación hídrica por aguas termales y vertidos no tratados.
+    
+    \item \textbf{Proyecto 4: Memoria Geográfica, Diagnóstico de Linderos Históricos y Cartografía Comunal:}
+    Levantamiento participativo con las autoridades tradicionales de la Comunidad Campesina de Puñun y cotejo de títulos primordiales coloniales, resoluciones del ex-PETT, COFOPRI y la SUNARP para identificar solapamientos con distritos colindantes.
+    
+    \item \textbf{Proyecto 5: Auditoría Geográfico-Documental e Inconsistencias de la Ley de Creación de Checras:}
+    Revisión exhaustiva de la ley formal de creación del distrito. Se detectaron vacíos de cartografía oficial, toponimias extintas y contradicciones jurisdiccionales con Santa Leonor y Paccho.
+    
+    \item \textbf{Proyecto 6: Integración Estructural, Simulación Normativa y Adecuación al TUO Ley 27795:}
+    Articuló los resultados de los cinco proyectos anteriores para redactar la propuesta técnica final: el \textbf{Anteproyecto de Ley de Saneamiento y Organización Territorial del Distrito de Checras}, convalidando los límites técnicos ante las asambleas comunales.
+\end{enumerate}
+
+\newpage
+\section{MÓDULO V: Marco de Articulación Normativa Comparada}
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Matriz de Articulación de Leyes Estratégicas para el Ordenamiento Territorial}
+\begin{tabularx}{\textwidth}{p{3.2cm}p{3.5cm}p{4cm}X}
+\toprule
+\textbf{Norma / Ley} & \textbf{Ente Rector} & \textbf{Objeto Central} & \textbf{Articulación con Checras y Huaura} \\
+\midrule
+\textbf{TUO Ley N.° 27795} \newline (D.S. 134-2025-PCM) & SDOT -- Presidencia del Consejo de Ministros (PCM) & Establece principios, criterios y procesos para acciones de demarcación territorial (creación, delimitación, categorización, traslado de capital). & Base legal para corregir la dualidad entre Maray (capital legal) y Puñun/Purapucu (centros funcionales) y sanear límites provinciales. \\
+\addlinespace
+\textbf{Ley N.° 32279} \newline (Ley de Ordenamiento Territorial y SINADOT) & Rectoría Nacional del SINADOT (PCM / MINAM) & Planificación integral del uso del suelo, intangibilidad de cabeceras de cuenca, Catastro Multipropósito y capacidad de acogida. & Protege los bofedales y andenerías de Checras frente a la expansión minera desregulada; integra el distrito al Plan de Cuenca del Huaura. \\
+\addlinespace
+\textbf{Ley N.° 29664} \newline (Ley del SINAGERD) & CENEPRED (Estimación y Prevención) e INDECI (Respuesta) & Gestión prospectiva, correctiva y reactiva del riesgo de desastres geológicos e hidrometeorológicos. & Condición vinculante para la traza vial Lacsaura--Puñun y restricción de ocupación urbana en quebradas activas propensas a huaycos. \\
+\addlinespace
+\textbf{Ley de Seguridad y Defensa Nacional} \newline (D. Leg. 1129) & Consejo de Seguridad y Defensa Nacional (SEDENA) & Garantizar la soberanía, integridad territorial y protección de infraestructura crítica del Estado. & Establece el blindaje territorial del corredor bioceánico transandino y la seguridad de las fuentes de agua estratégicas para el Megapuerto de Chancay. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+\section{Glosario Especializado y Formulario Maestro para el Parcial}
+
+\subsection{Glosario de Términos Geográfico-Territoriales}
+\begin{description}[leftmargin=!,labelwidth=4.5cm]
+    \item[Capacidad de Acogida:] Aptitud biofísica y geológica de una porción del territorio para albergar una determinada actividad antrópica (urbana, minera, industrial o agrícola) sin degradar irreversiblemente el equilibrio ecosistémico ni sobrepasar los umbrales de riesgo.
+    \item[Catastro Multipropósito:] Sistema de información territorial georreferenciado e interoperable que consolida datos físicos, jurídicos, económicos y ambientales de los predios, garantizando seguridad jurídica al suelo y certidumbre fiscal.
+    \item[Conectividad:] Propiedad topológica de una red que cuantifica el grado de unión entre sus nodos a través de aristas, independiente de la distancia métrica.
+    \item[Fricción de la Distancia:] Resistencia física, temporal y económica que impone el espacio geográfico al desplazamiento de flujos de personas, mercancías e información.
+    \item[Lugar Central:] Asentamiento humano que abastece de bienes y servicios especializados a una región circundante complementaria (hinterland), estructurado según umbrales de demanda y alcances espaciales (Christaller).
+    \item[Metabolismo Territorial:] Balance dinámico de flujos de materia, energía e información que ingresan, se transforman, se consumen y se disipan en un sistema territorial (Odum).
+    \item[Noosfera:] Estado evolutivo del territorio donde el pensamiento humano, la ciencia y la técnica organizada transforman conscientemente los ciclos biogeoquímicos de la biosfera para maximizar el desarrollo social armónico (Vernadsky).
+    \item[Soberanía Territorial:] Potestad inalienable del Estado para gobernar, delimitar y defender su espacio terrestre, marítimo y aeroespacial frente a interferencias externas y vacíos institucionales internos.
+\end{description}
+
+\subsection{Resumen de Fórmulas para el Examen}
+\begin{formulabox}{Formulario de Examen Parcial}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Índice Beta:} $\beta = \frac{e}{v}$ \hfill ($e = \text{aristas}, v = \text{nodos}$)
+    \item \textbf{Índice Gamma:} $\gamma = \frac{e}{3(v - 2)}$ \hfill ($\gamma = 1 \iff 100\%$ de aristas posibles)
+    \item \textbf{Número Ciclomático:} $\mu = e - v + p$ \hfill ($p = \text{componentes conexas}$, usualmente $1$)
+    \item \textbf{Índice Alfa:} $\alpha = \frac{\mu}{2v - 5} = \frac{e - v + p}{2v - 5}$ \hfill (porcentaje de circuitos independientes)
+    \item \textbf{Índice de Shimbel:} $S_i = \sum_{j} d_{ij}$ \hfill (mínimo $S_i \implies$ mayor accesibilidad topológica)
+    \item \textbf{Número de König:} $K_i = \max_{j} d_{ij}$ \hfill (mínimo $K_i \implies$ centro geodésico / menor peor caso)
+    \item \textbf{Índice de Rodeo:} $IR = \frac{d_{\text{carretera}}}{d_{\text{línea\_recta}}}$ \hfill ($IR > 1$; en Andes suele ser $> 3.5$)
+    \item \textbf{Cociente de Localización:} $LQ = \frac{e_i / e_{total}}{E_i / E_{total}}$ \hfill ($LQ > 1.25 \implies$ especialización económica)
+    \item \textbf{Curvatura Riemanniana del Espacio Vial:} $ds^2 = \sum g_{ij} dx^i dx^j$
+\end{itemize}
+\end{formulabox}
+
+\end{document}
